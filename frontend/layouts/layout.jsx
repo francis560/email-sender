@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
                     <Sidebar />
                 </div>
 
-                <div className="px-20">
+                <div className="px-20 w-full">
                     {children}
                 </div>
 

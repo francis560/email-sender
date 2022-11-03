@@ -1,10 +1,13 @@
 import { Navbar, Link, Button, Text } from "@nextui-org/react";
+import { useRouter } from "next/router";
 
 
 const Nav = () => {
-    return (
 
-        <Navbar isBordered variant="floating">
+    const router = useRouter();
+
+    return (
+        <Navbar isBordered variant="floating" disableShadow>
 
             <Navbar.Brand>
                 {/* <AcmeLogo /> */}
@@ -15,14 +18,15 @@ const Nav = () => {
                 <Navbar.Link href="#">Company</Navbar.Link>
             </Navbar.Content>
             <Navbar.Content>
-                <Navbar.Link color="inherit" href="#">Login</Navbar.Link>
                 <Navbar.Item>
-                    <Button color="none" className="text-white bg-purple-400" auto flat as={Link} href="#">Sign Up</Button>
+                    <Button onClick={() => router.push("/login")} color="inherit" auto flat>Sign Up</Button>
+                </Navbar.Item>
+                <Navbar.Item>
+                    <Button onClick={() => router.push("/signup")} color="none" className="text-white bg-purple-400" auto flat>Sign Up</Button>
                 </Navbar.Item>
             </Navbar.Content>
 
         </Navbar>
-
     );
 }
 
