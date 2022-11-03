@@ -16,8 +16,10 @@ const Home = () => {
 
             <Layout>
 
-                <Button className="bg-red-400">Enviar</Button>
-                
+                <div className="rounded-xl bg-purple-100 p-6">
+                    <h2 className="text-purple-400 text-4xl font-medium">Welcome</h2>
+                </div>
+
             </Layout>
 
         </Fragment>

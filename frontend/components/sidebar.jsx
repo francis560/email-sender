@@ -9,9 +9,11 @@ const Sidebar = () => {
     return (
         <div className="space-y-3">
 
+            <Button onClick={() => router.push("/")} className="bg-purple-400 py-3 px-5" size="auto" icon={<i className="uil uil-estate text-xl"></i>} />
+
             <Button onClick={() => router.push("/clients")} className="bg-purple-400 py-3 px-5" size="auto" icon={<i className="uil uil-user-plus text-xl"></i>} />
 
-            {/* <Button className="bg-purple-400 py-3 px-5" size="auto" icon={<i className="uil uil-user-plus text-xl"></i>} /> */}
+            <Button onClick={() => router.push("/email")} className="bg-purple-400 py-3 px-5" size="auto" icon={<i className="uil uil-envelope-edit text-xl"></i>} />
 
         </div>
     );
